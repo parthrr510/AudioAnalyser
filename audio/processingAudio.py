@@ -123,12 +123,6 @@ def silence(path):
 
 def emotionOutput(path):
     """ Using the Audio Analyser model to predict the Emotions"""
-    sample_rate, data = wavfile.read('alarm.wav')
-    len_data = len(data)
-    audioduration = len_data / sample_rate
-    if audioduration <3:
-        return "The minimum duration of the Audio must be 3 sec"
-
     X, sample_rate = librosa.load(path, res_type='kaiser_fast', duration=3, sr=22050 * 2)
     sample_rate = np.array(sample_rate)
     mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13), axis=0)

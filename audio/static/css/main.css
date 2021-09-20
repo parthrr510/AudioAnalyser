@@ -44,7 +44,6 @@
 .jss2{
     color: #FFFFFF;
     text-align: center;
-    overflow: scroll;
 }
 
 .jss3{
@@ -97,8 +96,4 @@
 .graph{
     height: 200px;
     width: 400px;
-}
-
-.jss5{
-
 }
