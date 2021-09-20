@@ -131,7 +131,7 @@ def emotionOutput(path):
     df2 = pd.DataFrame(data=df2)
     df2 = df2.stack().to_frame().T
     df2expanded = np.expand_dims(df2, axis=2)
-    loaded_model = load_model("AudioAnalyser",custom_objects={'GlorotUniform': glorot_uniform()})
+    loaded_model = load_model("AudioAnalyser.h5",custom_objects={'GlorotUniform': glorot_uniform()})
     pred = loaded_model.predict(df2expanded,batch_size=16,verbose=1)
     pred = pred.argmax(axis=1)
     predflatten = pred.astype(int).flatten()
