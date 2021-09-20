@@ -63,17 +63,25 @@ The jupyter notebook with the model is given with the name `AudioAnalyserModel.i
 The figure shows the model Loss during training  
 ![ModelLoss](https://github.com/parthrr510/AudioAnalyser/blob/main/images/modelLoss.png)
 
+Model Loss
+
 ![ModelFlowChart](https://github.com/parthrr510/AudioAnalyser/blob/main/images/ModelFlowChart.png)
+
+Model Flow Chart
 
 </div>
 
 <div align="justify" id="io-screenshots">
+
+## Input-Output Screenshots
 
 ![I/O Screenshots](https://github.com/parthrr510/AudioAnalyser/blob/main/images/InputOutput.gif)
 
 </div>
 
 <div align="justify" id = "flowchart">
+
+## Methodology Flowchart
 
 ![MainFlowChart](https://github.com/parthrr510/AudioAnalyser/blob/main/images/MainFlowChart.png)
 </div>
