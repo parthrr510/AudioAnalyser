@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Analyser</title>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+</head>
+<body>
+<header>
+<div class="jss95" style="background-image: url({% static 'SL.123119.26540.04.jpg' %}); transform: translate3d(0px, 0px, 0px);">
+    <div class="jss1">
+        <div class="MuiGrid-root jss98  MuiGrid-container">
+            <div class="MuiGrid-root jss99  MuiGrid-item">
+                <div class="jss2">
+                    <h2 class="jss3">Audio Analyser</h2>
+                </div>
+            </div>
+            <div class="MuiGrid-root jss99  MuiGrid-item">
+                <div class="jss2">
+                    <h3>The different graphs can be shown as:</h3>
+                    <h4>Amplitude Graph</h4>
+                    <img src='data:image/png;base64,{{ amp }}' class="graph">
+                    <h4>Spectogram</h4>
+                    <img src='data:image/png;base64,{{ sep }}' class="graph">
+                    <h4>Amplitude Silence Graph</h4>
+                    <img src='data:image/png;base64,{{ sil }}' class="graph">
+                </div>
+            </div>
+            <div class="MuiGrid-root jss99  MuiGrid-item">
+                <div class="jss2">
+                    <h3>The predictions from the model are</h3>
+                    <h4>Gender:- {{ gen }}</h4>
+                    <h4>Emotion:- {{ emo }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+{% block body %} {% endblock %}
+</body>
+</html>
