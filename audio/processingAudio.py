@@ -5,11 +5,11 @@ import io, base64
 import librosa
 import librosa.display
 from sklearn.preprocessing import LabelEncoder
-# from keras.models import load_model
-# import scipy
-# from scipy.io import wavfile
-# import pandas as pd
-# from tensorflow.keras.initializers import glorot_uniform
+from keras.models import load_model
+import scipy
+from scipy.io import wavfile
+import pandas as pd
+from tensorflow.keras.initializers import glorot_uniform
 
 def Amplitude(path):
     """ Gives the Amplitude Time Graph of the Audio"""
@@ -122,24 +122,27 @@ def silence(path):
     return b64
 
 
-# def emotionOutput(path):
-#     """ Using the Audio Analyser model to predict the Emotions"""
-#     sample_rate, data = wavfile.read('alarm.wav')
-#     len_data = len(data)
-#     audioduration = len_data / sample_rate
-#     X, sample_rate = librosa.load(path, res_type='kaiser_fast', duration=audioduration, sr=22050 * 2, offset=0.5)
-#     sample_rate = np.array(sample_rate)
-#     mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13), axis=0)
-#     feature = mfccs
-#     df2 = feature
-#     df2 = pd.DataFrame(data=df2)
-#     df2 = df2.stack().to_frame().T
-#     df2expanded = np.expand_dims(df2, axis=2)
-#     loaded_model = load_model("AudioAnalyser",custom_objects={'GlorotUniform': glorot_uniform()})
-#     pred = loaded_model.predict(df2expanded,batch_size=16,verbose=1)
-#     pred = pred.argmax(axis=1)
-#     predflatten = pred.astype(int).flatten()
-#     encoder = LabelEncoder()
-#     encoder.classes_ = np.load('encoder.npy')
-#     livepredictions = (encoder.inverse_transform((predflatten)))
-#     return livepredictions[0]
+def emotionOutput(path):
+    """ Using the Audio Analyser model to predict the Emotions"""
+    sample_rate, data = wavfile.read('alarm.wav')
+    len_data = len(data)
+    audioduration = len_data / sample_rate
+    if audioduration <3:
+        return "The minimum duration of the Audio must be 3 sec"
+
+    X, sample_rate = librosa.load(path, res_type='kaiser_fast', duration=3, sr=22050 * 2)
+    sample_rate = np.array(sample_rate)
+    mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13), axis=0)
+    feature = mfccs
+    df2 = feature
+    df2 = pd.DataFrame(data=df2)
+    df2 = df2.stack().to_frame().T
+    df2expanded = np.expand_dims(df2, axis=2)
+    loaded_model = load_model("AudioAnalyser",custom_objects={'GlorotUniform': glorot_uniform()})
+    pred = loaded_model.predict(df2expanded,batch_size=16,verbose=1)
+    pred = pred.argmax(axis=1)
+    predflatten = pred.astype(int).flatten()
+    encoder = LabelEncoder()
+    encoder.classes_ = np.load('encoder.npy',allow_pickle=True)
+    livepredictions = (encoder.inverse_transform((predflatten)))
+    return livepredictions[0]
