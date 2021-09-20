@@ -22,7 +22,7 @@
 >It basically provides us with various graphs to internpret how the audio is and what are its features furthermore it tells us about the emotion of the speaker.
 > It tells weather the speaker is a male or a female and tells about the speaker emotion.
 
-![image info](./images/MainFlowChart.png)
+![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/MainFlowChart.png)
 </div>
 
 
@@ -61,9 +61,9 @@ The jupyter notebook with the model is given with the name `AudioAnalyserModel.i
   * It gave an accuracy of `83.06%`.
 
 The figure shows the model Loss during training  
-![image info](./images/modelLoss.png)
+![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/modelLoss.png)
 
-![image info](./images/ModelFlowChart.png)
+![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/ModelFlowChart.png)
 
 </div>
 
