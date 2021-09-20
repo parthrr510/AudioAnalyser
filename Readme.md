@@ -7,11 +7,14 @@
 <h3 align="center">Visit Website: <a href=""> Link</a></h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+<div align="center">
+
 ![Python](https://img.shields.io/badge/python-3.9.1-blue)
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-%20GPL--3.0%20-blue)](https://github.com/parthrr510/AudioAnalyser/blob/main/LICENSE)
 
+</div>
 
 <div align="justify">
 
@@ -47,6 +50,8 @@
 <div align="justify">
   
 ## ML Models
+
+The jupyter notebook with the model is given with the name `AudioAnalyserModel.ipynb`.
 
 * CNN (Convolutional Neural Network)
   * CNN is a type of artificial neural network, which is widely used for image/object recognition and classification.
