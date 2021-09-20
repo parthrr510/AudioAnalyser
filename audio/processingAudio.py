@@ -6,7 +6,6 @@ import librosa
 import librosa.display
 from sklearn.preprocessing import LabelEncoder
 from keras.models import load_model
-import scipy
 from scipy.io import wavfile
 import pandas as pd
 from tensorflow.keras.initializers import glorot_uniform
