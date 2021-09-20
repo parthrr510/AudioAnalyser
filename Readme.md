@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h3 align="center">Visit Website: <a href=""> Link</a></h3>
+<h3 align="center">Youtube: <a href="https://youtu.be/6Cdfg5KeFZU">Link</a></h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <div align="center">
@@ -20,20 +20,20 @@
 
 >Audio Analyser is a project which helps people of different domains in different ways.
 >It basically provides us with various graphs to internpret how the audio is and what are its features furthermore it tells us about the emotion of the speaker.
-> It tells weather the speaker is a male or a female and tells about the speaker emotion.
-
-![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/MainFlowChart.png)
+> It tells whether the speaker is a male or a female and tells about the speaker emotion.
 </div>
 
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#ml-models-used">ML Models</a> •
+  <a href="#io-screenshots">I/O Screenshots</a> •
+  <a href="#flowchart">Methodology Flowchart </a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#license">License</a>
 </p>
 
-<div align="justify">
+<div id = "key-features" align="justify">
   
 ## Key Features
 
@@ -47,7 +47,7 @@
     * The input is also used to tell the emotion with which the speaker is speaking.
 </div>
 
-<div align="justify">
+<div id = "ml-models-used" align="justify">
   
 ## ML Models
 
@@ -61,14 +61,23 @@ The jupyter notebook with the model is given with the name `AudioAnalyserModel.i
   * It gave an accuracy of `83.06%`.
 
 The figure shows the model Loss during training  
-![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/modelLoss.png)
+![ModelLoss](https://github.com/parthrr510/AudioAnalyser/blob/main/images/modelLoss.png)
 
-![image info](https://github.com/parthrr510/AudioAnalyser/blob/main/images/ModelFlowChart.png)
+![ModelFlowChart](https://github.com/parthrr510/AudioAnalyser/blob/main/images/ModelFlowChart.png)
 
 </div>
 
+<div align="justify" id="io-screenshots">
 
-<div align="justify">
+![I/O Screenshots](https://github.com/parthrr510/AudioAnalyser/blob/main/images/InputOutput.gif)
+
+</div>
+
+<div align="justify" id = "flowchart">
+
+![MainFlowChart](https://github.com/parthrr510/AudioAnalyser/blob/main/images/MainFlowChart.png)
+</div>
+<div id = "how-to-use" align="justify">
   
 ## How to Use
 The steps involved to run the application are:<br>
@@ -92,7 +101,7 @@ python manage.py runserver
 </div>
 
 
-<div align="justify">
+<div id = "license"  align="justify">
  
 ## License
  
