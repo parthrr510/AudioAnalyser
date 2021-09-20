@@ -19,7 +19,7 @@
 >It basically provides us with various graphs to internpret how the audio is and what are its features furthermore it tells us about the emotion of the speaker.
 > It tells weather the speaker is a male or a female and tells about the speaker emotion.
 
-![image info](./images/MainFLowChart.png)
+![image info](./images/MainFlowChart.png)
 </div>
 
 
@@ -58,7 +58,7 @@
 The figure shows the model Loss during training  
 ![image info](./images/modelLoss.png)
 
-![image info](./images/ModelFLowChart.png)
+![image info](./images/ModelFlowChart.png)
 
 </div>
 
